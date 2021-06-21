@@ -24,5 +24,6 @@ export default class TabNav {
       this.matchTab();
     }
     this.activeTab(0);
+    return this;
   }
 }
