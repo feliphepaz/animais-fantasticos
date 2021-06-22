@@ -1,5 +1,6 @@
 .tooltip {
-  position: absolute;
+  position: fixed;
+  display: block;
   z-index: 500;
   background: rgba(0,0,0,.6);
   box-shadow: 0 0 0 2px #FB5, 0 0 0 6px rgba(0,0,0,.6);
@@ -10,6 +11,8 @@
   font-size: .875rem;
   max-width: 170px;
   border-radius: 2px;
-  top: 0px;
-  left: 0px;
+}
+
+.hidden-tooltip {
+  display: none !important;
 }
