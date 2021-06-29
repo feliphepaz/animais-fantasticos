@@ -1,5 +1,5 @@
 import ScrollSuave from './modules/scroll-suave.js';
-import initAnimacaoScroll from './modules/scroll-animacao.js';
+import AnimaScroll from './modules/scroll-animacao.js';
 import Accordion from './modules/accordion.js';
 import TabNav from './modules/tabnav.js';
 import Modal from './modules/modal.js';
@@ -31,7 +31,9 @@ fetchAnimais.init();
 const fetchBitcoin = new FetchBitcoin('https://blockchain.info/ticker', '.btc-preco');
 fetchBitcoin.init();
 
-initAnimacaoScroll();
+const animaScroll = new AnimaScroll('[data-anime="scroll"]');
+animaScroll.init();
+
 initDropdownMenu();
 initMenuMobile();
 initFuncionamento();
