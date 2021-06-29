@@ -1,12 +1,14 @@
+import debounce from './debounce.js';
+
 export default class AnimaScroll {
   constructor(sections) {
     this.sections = document.querySelectorAll(sections);
     this.windowMetade = window.innerHeight * 0.6;
-    this.checkDistance = this.checkDistance.bind(this);
+    this.checkDistance = debounce(this.checkDistance.bind(this), 50);
   }
 
   getDistance() {
-    this.distance = Array.from(this.sections).map((section) => {
+    this.distance = [...this.sections].map((section) => {
       const offset = section.offsetTop;
       return {
         element: section,
