@@ -1,4 +1,4 @@
-export default class initModal {
+export default class Modal {
   constructor(abrir, fechar, container) {
     this.botaoAbrir = document.querySelector(abrir);
     this.botaoFechar = document.querySelector(fechar);
